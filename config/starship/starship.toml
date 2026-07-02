@@ -1,0 +1,70 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = "$time(-$username)(-$hostname)(-$directory)(-$shell)(-$status)(-$nix_shell)(-$git_branch$git_status)\n$character"
+
+add_newline = false
+
+[time]
+disabled = false
+format = '\[[$time]($style)\]'
+time_format = '%H:%M'
+style = 'bold cyan'
+
+[username]
+show_always = true
+format = '\[[$user]($style)\]'
+style_user = 'bold purple'
+
+[hostname]
+ssh_only = false
+format = '\[[$hostname]($style)\]'
+style = 'bold green'
+
+[directory]
+format = '\[[$path]($style)\]'
+style = 'bold blue'
+truncation_length = 3
+
+[shell]
+disabled = false
+format = '\[[$indicator]($style)\]'
+bash_indicator = 'bash'
+zsh_indicator = 'zsh'
+fish_indicator = 'fish'
+style = 'bold white'
+
+[status]
+disabled = false
+format = '\[[$status]($style)\]'
+style = 'bold red'
+success_symbol = '[0](bold green)'
+
+[nix_shell]
+disabled = false
+format = '\[[nix: $name]($style)\]'
+style = 'bold purple'
+
+[git_branch]
+disabled = false
+format = '\[[$branch]($style)\]'
+style = 'bold green'
+
+[git_status]
+disabled = false
+format = '(\[[$all_status$ahead_behind]($style)\])'
+style = 'bold red'
+conflicted = '='
+ahead = '⇡${count}'
+behind = '⇣${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+untracked = '?${count}'
+stashed = '$${count}'
+modified = '!${count}'
+staged = '+${count}'
+renamed = '»${count}'
+deleted = '✘${count}'
+
+[character]
+success_symbol = '[╰─>](bold white)'
+error_symbol = '[╰─>](bold white)'
+vimcmd_symbol = '[╰─<](bold white)'
