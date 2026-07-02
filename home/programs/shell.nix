@@ -1,6 +1,5 @@
 { ... }:
 {
-  programs.bash.enable = true;   # confirm vs zsh
-
+  programs.bash.enable = true;
   programs.starship.enable = true;
 }
