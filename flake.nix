@@ -33,5 +33,14 @@
 				}
 			];
 		};
+
+    templates = {
+      dev = {
+        path = ./templates/dev;
+        description = "Dev env template";
+      };
+
+      default = self.templates.zig;
+    };
 	};
 }

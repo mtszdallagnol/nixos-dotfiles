@@ -1,6 +1,14 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "nixd", "basedpyright", "ruff" }
+local servers = { "html", "cssls", "nixd", "basedpyright", "ruff", "zls" }
+
+vim.lsp.config("zls", {
+  settings = {
+    zls = {
+      enable_argument_placeholders = false,
+    },
+  },
+})
 
 vim.lsp.enable(servers)
 
