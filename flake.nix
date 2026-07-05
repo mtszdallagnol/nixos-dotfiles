@@ -35,12 +35,10 @@
 		};
 
     templates = {
-      dev = {
-        path = ./templates/dev;
-        description = "Dev env template";
+      rust = {
+        path = ./templates/rust;
+        description = "Rust dev template"; 
       };
-
-      default = self.templates.zig;
     };
 	};
 }

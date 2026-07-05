@@ -1,6 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "nixd", "basedpyright", "ruff", "zls" }
+local servers = { "html", "cssls", "nixd", "basedpyright", "ruff", "zls", "rust_analyzer" }
 
 vim.lsp.config("zls", {
   settings = {

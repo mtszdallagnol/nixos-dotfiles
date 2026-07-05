@@ -13,7 +13,15 @@ return {
     end,
   },
 
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = { "rust" },
+    },
+  }
+
   -- test new blink
+  --
   -- { import = "nvchad.blink.lazyspec" },
 
   -- {
