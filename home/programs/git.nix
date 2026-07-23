@@ -6,6 +6,7 @@
     userEmail = "mzanettindallagnol@gmail.com";
     extraConfig = {
       init.defaultBranch = "main";
+      core.askPass = "";
     };
   };
 }
