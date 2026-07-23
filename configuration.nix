@@ -49,14 +49,19 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
   services.xserver = {
-	enable = true;
+    enable = true;
 
-	autoRepeatDelay = 200;
-	autoRepeatInterval = 35;
+    autoRepeatDelay = 200;
+    autoRepeatInterval = 35;
 
-	videoDrivers = ["nvidia"];
-	
-	windowManager.qtile.enable = true;
+    videoDrivers = ["nvidia"];
+
+    xkb = {
+      layout = "us,br";
+      variant = ",abnt2";
+    };
+
+    windowManager.qtile.enable = true;
   };
   services.displayManager.ly.enable = true;
   hardware.nvidia = {

@@ -22,6 +22,7 @@ keys = [
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
     Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
+    Key([mod], "i", lazy.widget["keyboardlayout"].next_keyboard(), desc = "Next keyboard layout"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
     Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
@@ -271,6 +272,9 @@ screens = [
                 ),
                 widget.Systray(padding = 6),
                 widget.Spacer(length = 8),
+                widget.KeyboardLayout(
+                    configured_keyboards=['us', 'br'],
+                ),
             ],
             margin=[0, 0, 0, 0], 
             size=30
